@@ -1,42 +1,50 @@
 ﻿using System.Transactions;
 
-namespace MethodsExercise
+namespace MethodsExercises2
 {
-    public class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            // used data
-            string hey = "Hey there";
-            string question = "whats yours?";
-            double tiem = (11.58);
-            double lunchTime = (12.00);
-         
-            Console.WriteLine($"{hey} My name is jake, {question}");
-            Console.WriteLine("(enter name)");
-            string userName = Console.ReadLine();
 
-            Console.WriteLine($" oh thats a cool name!");
+
+            var result = divide(9, 3);
+            var result2 = multiply(9, 3);
+
+            Console.WriteLine("to divide enter two numbers");
+            int answer = Convert.ToInt32(Console.ReadLine()); // i feel like there is a lot more simple way to do this but yea
+            int answer1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
-            Console.WriteLine($"where do you live {userName}?");
-            Console.WriteLine("(enter city name)");
-            string location = Console.ReadLine();
+            Console.WriteLine($" you wana divide {answer} by {answer1}");
+            Console.WriteLine();
+            Console.WriteLine(divide(answer, answer1));
+            Console.WriteLine("is your answer");
 
             Console.WriteLine();
-            Console.WriteLine($"hey I live pretty close to {location}.");
+
+            Console.WriteLine("to multiply enter two numbers");
+            int calculation = Convert.ToInt32(Console.ReadLine());
+            int calculation1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
-            Console.WriteLine($"{hey} {userName} its {tiem} so that means it time for lunch! \n" +
-                $"are you at {location}? because we should go get some food if you are, tacos are my favorite {question}");
-            Console.WriteLine("(enter favorite food)");
-            string foodType = Console.ReadLine();
-
+            Console.WriteLine($" you want to multiply {calculation} by {calculation1}");
             Console.WriteLine();
-            Console.WriteLine($"OK sounds good  {userName} see you at {lunchTime} for {foodType}!");
+            Console.WriteLine(multiply(calculation, calculation1));
+            Console.WriteLine("is your answer");
 
 
-            //I trying to make it more of a conversation let me know if you want my (ReadLines) to be more like (information based)
-            // and i put way to much thought into this ...dw I see that now
 
         }
+        public static int divide(int x, int y)
+        {
+
+            return x / y;
+        }
+        public static int multiply(int x, int y)
+        {
+            return (x * y);
+        }
+
+
+
     }
 }
